@@ -1,0 +1,62 @@
+.ExpenseItem {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  place-items: center;
+  padding: 0 2%;
+  margin: 1% 0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.ExpenseItem .expense_item__info {
+  padding: 1%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.ExpenseItem .expense_item__info .expense_item__date {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 0 2%;
+  color: #585252;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
+.ExpenseItem .expense_item__info .expense_item__title {
+  color: #444953;
+  width: 100%;
+  padding: 1%;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.ExpenseItem .expense_item__amount {
+  color: #444953;
+  font-weight: bold;
+  padding: 0 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .ExpenseItem {
+    margin: 2% 0;
+  }
+  .ExpenseItem .expense_item__info .expense_item__date {
+    font-size: 0.9rem;
+  }
+  .ExpenseItem .expense_item__info .expense_item__title {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=ExpenseItem.css.map */

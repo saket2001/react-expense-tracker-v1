@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,GAAG;EAC1B,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,EAAE;EACV,OAAO,EAAE,KAAK;CACjB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAE/B,AAAA,uBAAuB,CAAC;IACpB,KAAK,EAAE,IAAI;GACd",
+    "sources": [
+        "Expense.scss"
+    ],
+    "names": [],
+    "file": "Expense.css"
+}

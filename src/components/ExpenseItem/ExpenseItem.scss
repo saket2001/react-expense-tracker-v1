@@ -1,0 +1,66 @@
+$fontDark:#444953;
+$fontLight:#585252;
+
+.ExpenseItem {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    padding: 0 2%;
+    margin: 1% 0;
+    border-radius: 5px;
+    background-color: white;
+
+    .expense_item__info {
+        padding: 1%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .expense_item__date {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 2%;
+            color: $fontLight;
+            font-weight: lighter;
+            font-size: 0.9rem;
+        }
+
+        .expense_item__title {
+            color: $fontDark;
+            width: 100%;
+            padding: 1%;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+    }
+
+    .expense_item__amount {
+        color: $fontDark;
+        font-weight: bold;
+        padding: 0 2%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .ExpenseItem {
+
+        margin: 2% 0;
+
+        .expense_item__info {
+
+            .expense_item__date {
+                font-size: 0.9rem;
+            }
+
+            .expense_item__title {
+                font-size: 1.1rem;
+            }
+
+        }
+
+    }
+}
