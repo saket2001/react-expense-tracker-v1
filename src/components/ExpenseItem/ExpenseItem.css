@@ -4,13 +4,13 @@
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  -ms-grid-rows: minmax(80px, auto);
+      grid-template-rows: minmax(80px, auto);
   place-items: center;
   padding: 0 2%;
-  margin: 1% 0;
+  margin: 1%;
   border-radius: 5px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .ExpenseItem .expense_item__info {
@@ -35,17 +35,24 @@
 }
 
 .ExpenseItem .expense_item__info .expense_item__title {
-  color: #444953;
+  color: #022e57;
   width: 100%;
   padding: 1%;
   font-weight: 500;
   font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
 .ExpenseItem .expense_item__amount {
-  color: #444953;
+  background-color: #ff96ad;
+  border-radius: 5px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: flex-end;
+  color: #022e57;
   font-weight: bold;
-  padding: 0 2%;
+  padding: 2% 4%;
+  margin-top: 0.6rem;
 }
 
 @media screen and (max-width: 600px) {

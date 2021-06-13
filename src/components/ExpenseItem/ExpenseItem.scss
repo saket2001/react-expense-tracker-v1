@@ -5,12 +5,13 @@ $fontLight:#585252;
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: minmax(80px, auto);
     place-items: center;
     padding: 0 2%;
-    margin: 1% 0;
+    margin: 1%;
     border-radius: 5px;
-    background-color: white;
+    background-color: #fff;
+    // border: 2px solid lightgray;
 
     .expense_item__info {
         padding: 1%;
@@ -29,19 +30,25 @@ $fontLight:#585252;
         }
 
         .expense_item__title {
-            color: $fontDark;
+            color: #022e57;
             width: 100%;
             padding: 1%;
             font-weight: 500;
             font-size: 1.1rem;
+            text-transform: capitalize;
         }
 
     }
 
     .expense_item__amount {
-        color: $fontDark;
+        background-color: #ff96ad;
+        border-radius: 5px;
+        align-self: flex-start;
+        justify-self: flex-end;
+        color: #022e57;
         font-weight: bold;
-        padding: 0 2%;
+        padding: 2% 4%;
+        margin-top: 0.6rem;
     }
 }
 

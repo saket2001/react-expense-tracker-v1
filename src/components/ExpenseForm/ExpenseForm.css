@@ -1,0 +1,83 @@
+.expense_form {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: flex-start;
+  padding: 1% 2%;
+  margin: 1%;
+  background-color: #022e57;
+  border-radius: 8px;
+}
+
+.expense_form .form__div {
+  width: 100%;
+  padding: 1% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.expense_form .form__div .label {
+  width: 27%;
+  color: #fff5fd;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 2%;
+}
+
+.expense_form .form__div input[type='text'],
+.expense_form .form__div input[type='number'],
+.expense_form .form__div input[type='date'] {
+  padding: 0 1%;
+  margin: 0 5%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 10rem;
+  color: #444953;
+  font-size: 0.8rem;
+  background-color: #fff5fd;
+}
+
+.expense_form .form__div input[type='text']:focus,
+.expense_form .form__div input[type='number']:focus,
+.expense_form .form__div input[type='date']:focus {
+  border: 1px solid #22221d;
+}
+
+.expense_form .form__div_action {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3% 0;
+}
+
+.expense_form .form__div_action .btn {
+  padding: 3% 5%;
+  margin: 0 1%;
+  font-size: 1rem;
+  width: auto;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff96ad;
+  color: #022e57;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.expense_form .form__div_action .btn:hover {
+  cursor: pointer;
+  background-color: #ce909d;
+}
+/*# sourceMappingURL=ExpenseForm.css.map */

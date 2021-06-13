@@ -1,0 +1,77 @@
+$fontDark:#444953;
+$fontLight:#fff5fd;
+
+$bg:#022e57;
+
+
+@mixin defaults {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.expense_form {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: flex-start;
+    padding: 1% 2%;
+    margin: 1%;
+    background-color: #022e57;
+    border-radius: 8px;
+
+    .form__div {
+        width: 100%;
+        padding: 1% 0;
+        display: flex;
+        flex-flow: row;
+
+        .label {
+            width: 27%;
+            color: $fontLight;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0 2%;
+        }
+
+        input[type='text'],
+        input[type='number'],
+        input[type='date'] {
+            padding: 0 1%;
+            margin: 0 5%;
+            @include defaults();
+            width: 10rem;
+            color: $fontDark;
+            font-size: 0.8rem;
+            background-color: $fontLight;
+
+            &:focus {
+                border: 1px solid rgb(34, 34, 29);
+            }
+        }
+    }
+
+    .form__div_action {
+        width: 100%;
+        display: flex;
+        margin: 3% 0;
+
+        .btn {
+            padding: 3% 5%;
+            margin: 0 1%;
+            font-size: 1rem;
+            width: auto;
+            font-weight: 600;
+            @include defaults();
+            background-color: #ff96ad;
+            color: #022e57;
+            align-self: center;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #ce909d;
+            }
+        }
+    }
+}

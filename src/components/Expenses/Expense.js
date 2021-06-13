@@ -1,28 +1,41 @@
+import { useState } from "react";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
+import FilterDiv from "../Filter/FilterDiv";
+import ExpenseChart from "../ExpenseChart/ExpenseChart";
 import "./Expense.css";
+
 const Expense = (props) => {
+  const [inputFilterYear, setFilterYear] = useState("2022");
+
+  const getFilterYear = (data) => {
+    setFilterYear(data);
+  };
+
+  const filteredExpenses = props.data.filter(
+    (expense) => expense.date.getFullYear().toString() === inputFilterYear
+  );
+
+  let expenseContent = <p>No expenses for selected year</p>;
+
+  if (filteredExpenses.length > 0) {
+    expenseContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        date={expense.date}
+        title={expense.title}
+        amount={expense.amount}
+      />
+    ));
+  }
+
   return (
     <div className="expense_item_container">
-      <ExpenseItem
-        date={props.data[0].date}
-        title={props.data[0].title}
-        amount={props.data[0].amount}
-      />
-      <ExpenseItem
-        date={props.data[1].date}
-        title={props.data[1].title}
-        amount={props.data[1].amount}
-      />
-      <ExpenseItem
-        date={props.data[2].date}
-        title={props.data[2].title}
-        amount={props.data[2].amount}
-      />
-      <ExpenseItem
-        date={props.data[3].date}
-        title={props.data[3].title}
-        amount={props.data[3].amount}
-      />
+      <FilterDiv selected={inputFilterYear} onFilterChange={getFilterYear} />
+      <ExpenseChart expenses={filteredExpenses} />
+      <h3>Your Expenses</h3>
+
+      {/* rendering array of data */}
+      {expenseContent}
     </div>
   );
 };
